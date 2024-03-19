@@ -74,12 +74,8 @@ class AutoAdBot:
             keyboard.release('t')
             sleep(0.5)  # Wait for chat to open
             messages = [
-                '/ad HARDCORE &#FF870F&lHARDEST MINECRAFT SERVER &f&l⭐ &#FF590F&lCAN YOU BEAT HARDCORE??',
-                '/ad hardcore &c&lOFFICIAL HARDCORE SERVER &e🔥 &6&lJUST RELEASED! &e🔥 &a[CLICK HERE]',
-                '/ad L1FESTEE1 &#e97dfa&lCRYSTAL PVP &r&f⭐ &#fc4cb0&lPOT &8[&d&l&nCLICK HERE&8&l]',
-                '/ad L1FESTEE1 &#8cff00&lDUPE &f⭐ &#8cff00&lLIKE DONUTSMP&r&f ⭐ &8[&#f74d0a&l&nCLICK&8]',
-                '/ad L1FESTEE1 &#fa7d9a&lDUPE &r&f🗡 &#f51448&lCRYSTAL &8[&e&l&nCLICK HERE&8&l]',
-                '/ad L1FESTEE1 &#e97dfa&lCRYSTAL PVP &r&f⭐ &#fc4cb0&lDUPE &8[&d&l&nCLICK HERE&8&l]'
+                '/ad KalpeMC &b&lBRAND NEW SERVER NETWORK &f&lCLICK HERE TO JOIN',
+                '/ad KalpeMC &3&lYEDUPE &f&l| &b&lJUSTBOX &f&l| &3&lGENWARS &f&l| &b&lFORTKITS &f&l| &3&lSTAGES',
             ]
             pyautogui.typewrite(messages[choice - 1])  # Type message
             keyboard.press_and_release('enter')  # Send message
