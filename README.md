@@ -7,4 +7,6 @@
 <h2 align="center">Usage</h2><div align="center">
 <i>Minecraft cannot be maximised. Try not to press any keys or tab around when the cooldown starts.</i
 
-<i>This was made using the non functional "fork" of Invis' py script</i>
+
+<h2 align="center">Credits</h2><div align="center">
+<i>This was made using the non functional "fork" of awel's python script. Improved by SnowyJS</i>
