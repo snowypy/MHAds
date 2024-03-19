@@ -4,5 +4,7 @@
 <h2 align="center">What is V1 and what is V2?</h2><div align="center">
 <i>V1 does not have the movement while V2 features realistic keyboard stroles.</i>
 
+<h2 align="center">Usage</h2><div align="center">
+<i>Minecraft cannot be maximised. Try not to press any keys or tab around when the cooldown starts.</i
 
-<i>This was made using the non functional "fork" of Invis'</i>
+<i>This was made using the non functional "fork" of Invis' py script</i>
