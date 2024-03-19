@@ -60,7 +60,7 @@ class AutoAdBot:
         sleep(2)
         while self.bot_flag:
 
-            choice = random.randint(1, 6)
+            choice = random.randint(1, 2)
             sleeptime = random.randint(241, 470)
 
             # Show warning in a new console tab
