@@ -1,0 +1,12 @@
+{
+    "minecraft_client_name": "Lunar Client 1.20.2 (v2.14.5-2411)",
+    "cooldown_min": 3,
+    "cooldown_max": 5,
+    "pause_min": 3600,
+    "pause_max": 10800,
+    "warning_delay": 2,
+    "ads": [
+        "/ad HARDCORE &#FF870F&lHARDEST MINECRAFT SERVER &f&l⭐ &#FF590F&lCAN YOU BEAT HARDCORE??",
+        "/ad hardcore &c&lOFFICIAL HARDCORE SERVER &e🔥 &6&lJUST RELEASED! &e🔥 &a[CLICK HERE]"
+    ]
+}

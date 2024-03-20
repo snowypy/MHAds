@@ -1,16 +1,20 @@
-from time import sleep
+from time import sleep, strftime, localtime, time  # Importing 'time' module
 import random
 import keyboard
 import pyautogui
 import threading
 import subprocess
 import json
+import tkinter as tk
 
 
 class AutoAdBot:
     def __init__(self, config_file):
         self.bot_flag = True
         self.config = self.load_config(config_file)
+        self.last_ad_time = None
+        self.last_ad_index = None
+        self.next_ad_time = None
 
     def load_config(self, config_file):
         with open(config_file, 'r') as f:
@@ -25,11 +29,8 @@ class AutoAdBot:
             t1 = threading.Thread(target=self.autoad)
             t1.start()
 
-            # Start a timer for 1-3 hours (3600 to 10800 seconds)
-            timer_thread = threading.Timer(random.randint(self.config["min_pause_duration"],
-                                                           self.config["max_pause_duration"]),
-                                           self.pause_execution)
-            timer_thread.start()
+            t2 = threading.Thread(target=self.update_display)
+            t2.start()
 
             while self.bot_flag:
                 sleep(3)
@@ -90,12 +91,19 @@ class AutoAdBot:
             keyboard.press_and_release('enter')  # Send message
             sleep(1)  # Wait for message to send
 
+            # Update last ad time and index
+            self.last_ad_time = strftime('%H:%M:%S', localtime())
+            self.last_ad_index = choice
+
             # Simulate player movement after ad
             self.simulate_movement()
 
             # Minimize Minecraft
             pyautogui.hotkey('win', 'down')
             pyautogui.hotkey('alt', 'tab')
+
+            # Update next ad time
+            self.next_ad_time = strftime('%H:%M:%S', localtime(time() + sleeptime))
 
             sleep(sleeptime / 1000)
 
@@ -120,6 +128,27 @@ class AutoAdBot:
     def pause_execution(self):
         print('\nPausing execution for 1-3 hours.\n')
         sleep(random.randint(self.config["min_pause_duration"], self.config["max_pause_duration"]) / 1000)
+
+    def update_display(self):
+        root = tk.Tk()
+        root.title("AutoAd Information")
+
+        last_ad_label = tk.Label(root, text="Last Ad Time: ")
+        last_ad_label.grid(row=0, column=0)
+        last_ad_info = tk.Label(root, textvariable=self.last_ad_time)
+        last_ad_info.grid(row=0, column=1)
+
+        last_ad_index_label = tk.Label(root, text="Last Ad Index: ")
+        last_ad_index_label.grid(row=1, column=0)
+        last_ad_index_info = tk.Label(root, textvariable=self.last_ad_index)
+        last_ad_index_info.grid(row=1, column=1)
+
+        next_ad_label = tk.Label(root, text="Next Ad Time: ")
+        next_ad_label.grid(row=2, column=0)
+        next_ad_info = tk.Label(root, textvariable=self.next_ad_time)
+        next_ad_info.grid(row=2, column=1)
+
+        root.mainloop()
 
 
 if __name__ == "__main__":
