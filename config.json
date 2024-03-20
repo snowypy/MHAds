@@ -1,0 +1,16 @@
+{
+    "messages": [
+        "HARDCORE &#FF870F&lHARDEST MINECRAFT SERVER &f&l⭐ &#FF590F&lCAN YOU BEAT HARDCORE??",
+        "hardcore &c&lOFFICIAL HARDCORE SERVER &e🔥 &6&lJUST RELEASED! &e🔥 &a[CLICK HERE]",
+        "L1FESTEE1 &#e97dfa&lCRYSTAL PVP &r&f⭐ &#fc4cb0&lPOT &8[&d&l&nCLICK HERE&8&l]",
+        "L1FESTEE1 &#8cff00&lDUPE &f⭐ &#8cff00&lLIKE DONUTSMP&r&f ⭐ &8[&#f74d0a&l&nCLICK&8]",
+        "L1FESTEE1 &#fa7d9a&lDUPE &r&f🗡 &#f51448&lCRYSTAL &8[&e&l&nCLICK HERE&8&l]",
+        "L1FESTEE1 &#e97dfa&lCRYSTAL PVP &r&f⭐ &#fc4cb0&lDUPE &8[&d&l&nCLICK HERE&8&l]"
+    ],
+    "min_ad_delay": 140,
+    "max_ad_delay": 270,
+    "min_movement_delay": 17,
+    "max_movement_delay": 141,
+    "min_pause_duration": 5600,
+    "max_pause_duration": 10800
+}
